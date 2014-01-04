@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/sorting/insertion.js"></script>
+        <script type="text/javascript" src="js/sorting/selection.js"></script>
+        <script type="text/javascript" src="js/sorting/mergeSort.js"></script>
+        <script type="text/javascript" src="js/searching/linear.js"></script>
+    </head>
+    <body>
+        
+        <script>
+            var n = 10, minNumber = 0, maxNumber = 100;
+            var array = new Array(n).join(' ').split(' ').map(function() { return Math.floor(Math.random() * maxNumber + minNumber); });
+            
+            window.TEST_MODE = true;
+            
+            //Sorting.InsertionSort(array);
+            //Sorting.SelectionSort(array);
+            Sorting.MergeSort(array);
+            //Searching.Linear([1, 2, 3, 4, 5], 4);
+
+            
+        </script>
+    </body>
+</html>
