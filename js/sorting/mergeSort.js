@@ -30,7 +30,6 @@
                 
             MergeSort(A, p, q);
             MergeSort(A, q + 1, r);
-            console.log(p, q, r);
             Merge(A, p, q, r);
         }
     }
