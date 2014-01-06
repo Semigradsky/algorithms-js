@@ -7,105 +7,133 @@
         <script type="text/javascript" src="js/searching/linear.js"></script>
     </head>
     <body>
-        
+        <h1>Open console</h1>
         <form>
             <div>
-                <label for="countDigits">Count digits: </label>
-                <input name="countDigits" type="number" min="1" max="100" value="10"/>
+                <div>
+                    <label for="countDigits">Count digits: </label>
+                    <input name="countDigits" type="number" min="1" max="100" value="10"/>
+                </div>
+                <div>
+                    <label for="minNumber">Min number: </label>
+                    <input name="minNumber" type="number" min="-100" max="100" value="0"/>
+                </div>
+                <div>
+                    <label for="maxNumber">Max number: </label>
+                    <input name="maxNumber" type="number" min="-100" max="100" value="100"/>
+                </div>
             </div>
             <div>
-                <button id="GenerateRandomArray">Generate random array</button>
+                <button type="button" id="GenerateRandomArray">Generate random array</button>
                 Array: <span id="ArrayForSorting"></span>
             </div>
-            <fieldset class="sort">
+            <fieldset id="sort">
                 <legend>Sort</legend>
                 <div>
-                    <button class="run" id="QuickSort" disabled>QuickSort</button>
+                    <button type="button" class="run" id="QuickSort" disabled>QuickSort</button>
                     <a href="http://en.wikipedia.org/wiki/Quicksort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="MergeSort">Merge sort</button>
+                    <button type="button" class="run" id="MergeSort">Merge sort</button>
                     <a href="http://en.wikipedia.org/wiki/Merge_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="HeapSort" disabled>Heap sort</button>
+                    <button type="button" class="run" id="HeapSort" disabled>Heap sort</button>
                     <a href="http://en.wikipedia.org/wiki/Heapsort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="InsertionSort">Insertion sort</button>
+                    <button type="button" class="run" id="InsertionSort">Insertion sort</button>
                     <a href="http://en.wikipedia.org/wiki/Insertion_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="Introsort" disabled>Introsort</button>
+                    <button type="button" class="run" id="Introsort" disabled>Introsort</button>
                     <a href="http://en.wikipedia.org/wiki/Introsort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="SelectionSort">Selection sort</button>
+                    <button type="button" class="run" id="SelectionSort">Selection sort</button>
                     <a href="http://en.wikipedia.org/wiki/Selection_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="Timsort" disabled>Timsort</button>
+                    <button type="button" class="run" id="Timsort" disabled>Timsort</button>
                     <a href="http://en.wikipedia.org/wiki/Timsort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="Shellsort" disabled>Shellsort</button>
+                    <button type="button" class="run" id="Shellsort" disabled>Shellsort</button>
                     <a href="http://en.wikipedia.org/wiki/Shellsort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="BubbleSort" disabled>Bubble sort</button>
+                    <button type="button" class="run" id="BubbleSort" disabled>Bubble sort</button>
                     <a href="http://en.wikipedia.org/wiki/Bubble_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="TreeSort" disabled>Tree sort</button>
+                    <button type="button" class="run" id="TreeSort" disabled>Tree sort</button>
                     <a href="http://en.wikipedia.org/wiki/Tree_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="CycleSort" disabled>Cycle sort</button>
+                    <button type="button" class="run" id="CycleSort" disabled>Cycle sort</button>
                     <a href="http://en.wikipedia.org/wiki/Cycle_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="LibrarySort" disabled>Library sort (gapped insertion sort)</button>
+                    <button type="button" class="run" id="LibrarySort" disabled>Library sort (gapped insertion sort)</button>
                     <a href="http://en.wikipedia.org/wiki/Library_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="PatienceSorting" disabled>Patience sorting</button>
+                    <button type="button" class="run" id="PatienceSorting" disabled>Patience sorting</button>
                     <a href="http://en.wikipedia.org/wiki/Patience_sorting" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="Smoothsort" disabled>Smoothsort</button>
+                    <button type="button" class="run" id="Smoothsort" disabled>Smoothsort</button>
                     <a href="http://en.wikipedia.org/wiki/Smoothsort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="StrandSort" disabled>Strand sort</button>
+                    <button type="button" class="run" id="StrandSort" disabled>Strand sort</button>
                     <a href="http://en.wikipedia.org/wiki/Strand_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="TournamentSort" disabled>Tournament sort</button>
+                    <button type="button" class="run" id="TournamentSort" disabled>Tournament sort</button>
                     <a href="http://en.wikipedia.org/wiki/Tournament_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="CocktailSort" disabled>Cocktail sort</button>
+                    <button type="button" class="run" id="CocktailSort" disabled>Cocktail sort</button>
                     <a href="http://en.wikipedia.org/wiki/Cocktail_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="CombSort" disabled>Comb sort</button>
+                    <button type="button" class="run" id="CombSort" disabled>Comb sort</button>
                     <a href="http://en.wikipedia.org/wiki/Comb_sort" target="_blank">wiki</a>
                 </div>
                 <div>
-                    <button class="run" id="GnomeSort" disabled>Gnome sort</button>
+                    <button type="button" class="run" id="GnomeSort" disabled>Gnome sort</button>
                     <a href="http://en.wikipedia.org/wiki/Gnome_sort" target="_blank">wiki</a>
                 </div>
             </fieldset>
             <fieldset class="search">
                 <legend>Search element in array</legend>
                 <div>
-                    <button class="run" id="LinearSearch">Linear Search</button>
+                    <button type="button" class="run" id="LinearSearch">Linear Search</button>
                     <a href="http://en.wikipedia.org/wiki/Linear_search" target="_blank">wiki</a>
                 </div>
             </fieldset>
         </form>
         
         <script>
+            document.getElementById("sort").onclick = function(event) {
+                if (event.target.className != "run") {
+                    return;
+                }
+                var array = [3, 2];
+                
+                console.log("************************************************");
+                console.log("Start ", event.target.textContent);
+                console.log("************************************************");
+                Sorting[event.target.id](array);
+                console.log("************************************************");
+            };
+            
+            
+            function gnerateRandomArray(n, min, max) {
+                return new Array(n).join(' ').split(' ').map(function() { return Math.floor(Math.random() * max + min); });
+            }
+            
             var n = 10, minNumber = 0, maxNumber = 100;
             var array = new Array(n).join(' ').split(' ').map(function() { return Math.floor(Math.random() * maxNumber + minNumber); });
             
