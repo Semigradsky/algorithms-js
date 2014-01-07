@@ -11,7 +11,7 @@
 
         for (var i = 0; i < A.length - 1; i++) {
             if (TEST_MODE) {
-                console.group("Loop " + (i+1));
+                console.groupCollapsed("Loop " + (i+1));
             }
             
             for (var j = A.length - 1; j > i; j--) {

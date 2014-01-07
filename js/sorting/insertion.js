@@ -44,9 +44,9 @@
                 console.groupCollapsed("A[" + (i+1) + "] <- key");
                 console.log("A =", A);
                 console.groupEnd();
-                
-                console.groupEnd();
+
                 console.log("A =", A);
+                console.groupEnd();
             }
         }
         

@@ -12,9 +12,9 @@
         for (var j = 0; j < A.length - 1; j++) {
             if (TEST_MODE) {
                 if (descending) {
-                    console.group("Searching maximal element from ", j, "position.");
+                    console.groupCollapsed("Searching maximal element from ", j, "position.");
                 } else {
-                    console.group("Searching minimal element from ", j, "position.");
+                    console.groupCollapsed("Searching minimal element from ", j, "position.");
                 }
             }
             
