@@ -5,6 +5,7 @@
 
 var TEST_MODE = false;
 var $ = window.document.getElementById;
+$ = $.bind(window.document);
 
 function generateRandomArray(n, min, max) {
     return new Array(n).join(' ').split(' ').map(function() { return Math.floor(Math.random() * (max - min) + min); });
