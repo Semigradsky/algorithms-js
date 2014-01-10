@@ -1,23 +1,22 @@
-(function(root) {
+/*global log, initializeWebWorker */
+(function(self) {
     "use strict";
-    
-    root.Sorting = root.Sorting || { };
-    root.Sorting.BubbleSort = function(A, descending) {
-        var TEST_MODE = root.TEST_MODE;
-        
+
+
+    var BubbleSort = function(A, descending, TEST_MODE) {
         if (TEST_MODE) {
-            console.group("Start sorting. A =", A, "Size: " + A.length);
+            log('GROUP', ['Start sorting. A =', A, 'Size: ', A.length]);
         }
 
         for (var i = 0; i < A.length - 1; i++) {
             if (TEST_MODE) {
-                console.groupCollapsed("Loop " + (i+1));
+                log('GROUP_COLLAPSED', ['Loop' + (i+1)]);
             }
             
             for (var j = A.length - 1; j > i; j--) {
                 if (descending ? A[j] > A[j - 1] : A[j] < A[j - 1]) {
                     if (TEST_MODE) {
-                        console.groupCollapsed("A[", j - 1, "] <-> A[", j, "]");
+                        log('GROUP_COLLAPSED', ['A[', j - 1, '] <-> A[', j, ']']);
                     }
                     
                     var t = A[j];
@@ -25,22 +24,25 @@
                     A[j - 1] = t;
                     
                     if (TEST_MODE) {
-                        console.log("A =", A);
-                        console.groupEnd();
+                        log('LOG', ['A =', A]);
+                        log('GROUP_END');
                     }
                 }
             }
             if (TEST_MODE) {
-                console.log("A =", A);
-                console.groupEnd();
+                log('LOG', ['A =', A]);
+                log('GROUP_END');
             }
         }
         
         if (TEST_MODE) {
-            console.info("Sorted array =", A);
-            console.groupEnd();
+            log('INFO', ['Sorted array =', A]);
+            log('GROUP_END');
         }
         return A;
     };
-    
+
+
+    self.importScripts('/js/worker.js');
+    initializeWebWorker(BubbleSort);
 }(this));
