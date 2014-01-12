@@ -1,6 +1,5 @@
 /*global window, console */
 /*jshint globalstrict: true*/
-
 "use strict";
 
 var TEST_MODE = true;
